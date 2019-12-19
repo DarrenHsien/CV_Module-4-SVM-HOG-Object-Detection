@@ -68,6 +68,22 @@
   
   3).訓練參數配置的建立json(我們需要建立這個訓練器的Configure)
     
+    -python open io with read file as string
+    
+    -json.loads : 讀取json文件變為dict
+    
+    -使用json_minify : 可有效將類似json格式的字串(非json)優化為json.loads模組可讀之文件
+    
+    -善用class建立物件擁有字典功能
+      
+      -self.__dict__.update()
+      
+      -def __getitem__(self, k):
+        
+        return self.__dict__.get(k, None)
+        
+    -文件檔擺放內容
+    
       -初始路徑位置 : 正向訓練資料 ; 正向訓練資料註解 ; 反向訓練資料
       
       -特徵擷取 : 特徵資料路徑(hdf5) ; percent_gt_images ; offset ; use_flip ; num_distraction_images ; num_distractions_per_image
