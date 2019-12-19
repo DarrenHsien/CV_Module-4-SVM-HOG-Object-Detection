@@ -1,4 +1,4 @@
-# Module-2-SVM-HOG-Object-Detection
+# Module-3-SVM-HOG-Object-Detection
 
 屬於傳統的物件辨識器 : OpenCV與dlib的組合運用
 
