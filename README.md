@@ -82,7 +82,7 @@
         
         return self.__dict__.get(k, None)
         
-    -善用golb.glob針對特有特有格式整合資料夾內檔案清單(ex .mat)
+    -善用golb.glob針對特有檔案格式整合資料夾內檔案清單(ex .mat)
       
       -以便用於統籌所有標記方框之大小均值等等 : 以便用於後續HOG計算的參數配置
         
