@@ -65,7 +65,23 @@
     
     -通常會與影像縮小工具模組搭配應用
   
-
+  
+  3).訓練參數配置的建立json(我們需要建立這個訓練器的Configure)
+    
+      -初始路徑位置 : 正向訓練資料 ; 正向訓練資料註解 ; 反向訓練資料
+      
+      -特徵擷取 : 特徵資料路徑(hdf5) ; percent_gt_images ; offset ; use_flip ; num_distraction_images ; num_distractions_per_image
+      
+      -HOG參數 : 方向數 ; pixels_per_cell ; cells_per_block ; 資料標準化bool
+      
+      -物件偵測 : 滑動視窗位移步伐 ; overlap_thresh ; 圖像縮放比例 ; 滑動視窗大小 ; 信心程度閾值
+      
+      -SVM學習器參數 : 學習器模型存放路徑 ; C懲罰係數
+      
+      -HARD NEGATIVE MINING : hn_num_distraction_images , hn_window_step , hn_pyramid_scale , hn_min_probability
+      
+      
+    
 
 
 
