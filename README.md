@@ -99,9 +99,39 @@
       -SVM學習器參數 : 學習器模型存放路徑 ; C懲罰係數
       
       -HARD NEGATIVE MINING : hn_num_distraction_images , hn_window_step , hn_pyramid_scale , hn_min_probability
-      
-      
+     
     
+  4).HOG全局影像描述器的建立
+  
+  
+  5).建立儲存器工具
+  
+    -H5PY : Python 模組小型資料庫
+    
+    -儲存資料
+    
+      #建立資料庫路徑與讀寫IO
+      db = h5py.File(path, "w")
+    
+      #創建資料庫 : 資料庫名稱 ; (資料比數長度 , 資料column長度+1(擺放標籤用)) ; 儲存資料類型
+      dataset = db.create_dataset(datasetName, (len(data), len(data[0]) + 1), dtype="float")
+      
+      #擺入資料
+      dataset[0:len(data)] = np.c_[labels, data]
+      
+      #卸載儲存器
+      db.close()
+    
+    -讀取資料
+      
+      #連結資料庫
+      db = h5py.File(path, "r")
+      
+      #讀取資料
+      (labels, data) = (db[datasetName][:, 0], db[datasetName][:, 1:])
+      
+      #卸載儲存器
+      db.close()
 
 
 
