@@ -165,9 +165,24 @@
       
         -Hard-negatives
 
-
-
-
+  9).整合流程
+    
+    1.explore_dims.py : 計算訓練資料相關基本資訊，以方便後續參數建置
+    
+    2.extract_features.py : 透過HOG影像描述建立特徵並標記標記並儲存於Hdf5
+    
+    3.train_model : 首次訓練模型(SVM)
+    
+    4.test_model_no_nms : 無非最大抑制的測試辨識狀況
+    
+    5.test_model_with_nms : 加入非最大抑制的測試辨識狀況
+    
+    6.hard_negtive_mine : 將辨識錯誤的資料加入訓練集
+    
+    7.train_model : 再次訓練模型(SVM)
+    
+    8.test_model_with_nms : 加入非最大抑制的測試辨識狀況
+    
 
 
 
